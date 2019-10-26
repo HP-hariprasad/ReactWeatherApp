@@ -45,9 +45,9 @@ exports.locations = function (req, res) {
   // console.log("req",req.body);
   var today = new Date();
   var locations = {
-    "Location":req.body.location,
-    "created": today,
-    "modified": today
+    "Latitude":req.body.Latitude,
+    "Longitude":req.body.Longitude,
+    "Created": today
   }
   connection.query('INSERT INTO locations SET ?', locations, function (error, results, fields) {
     if (error) {
